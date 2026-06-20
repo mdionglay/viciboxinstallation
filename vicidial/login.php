@@ -13,7 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = trim($_POST['password'] ?? '');
 
     if ($username !== '' && $password !== '') {
-        $_SESSION['user_id'] = hash('sha256', $username . '-demo-user');
+        try {
+            $_SESSION['user_id'] = bin2hex(random_bytes(16));
+        } catch (Throwable $e) {
+            $_SESSION['user_id'] = hash('sha256', uniqid($username, true));
+        }
         $_SESSION['user_name'] = $username;
         header('Location: index.php');
         exit;

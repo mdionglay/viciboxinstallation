@@ -51,7 +51,7 @@ function render_shell_start(string $title, string $activePage): void
 
     echo '  <header class="top-header">';
     echo '    <div class="header-left">';
-    echo '      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">☰</button>';
+    echo '      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu"><span aria-hidden="true">☰</span><span class="sr-only">Menu</span></button>';
     echo '      <div>';
     echo '        <h1 class="brand">ViciDial Admin</h1>';
     echo '        <p class="brand-subtitle">Call Center Operations Console</p>';
