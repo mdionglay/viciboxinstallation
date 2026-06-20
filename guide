@@ -1,0 +1,23 @@
+Run it like this:
+
+    Save file:
+
+bash
+
+nano vicidial-almalinux8-install.sh
+
+Paste script, then save.
+
+    Make executable:
+
+bash
+
+chmod +x vicidial-almalinux8-install.sh
+
+    Run:
+
+bash
+
+sudo ./vicidial-almalinux8-install.sh
+
+If you want, next I can give you a post-install checklist (SIP trunk, carrier test call, agent login test).
